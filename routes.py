@@ -1,4 +1,5 @@
 from run import app
+import data
 from flask import render_template, url_for, send_file
 
 @app.route('/')
@@ -12,11 +13,11 @@ def index():
 
 @app.route('/about')
 def about():
-    return render_template('about.html')
+    return render_template('about.html', education=data.education)
 
 @app.route('/experience')
 def experience():
-    return render_template('experience.html')
+    return render_template('experience.html', experience=data.experience)
 
 @app.route('/projects')
 def projects():

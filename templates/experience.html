@@ -1,13 +1,30 @@
 {% extends 'base.html' %}
 
 {% block header %}
-<h1 class="main-header">My Experience</h1>
+My Experience
+{% endblock %}
+
+{% block header_desc %}
+Here is a look at my experience over the past 4 years of my college career
 {% endblock %}
 
 {% block main %}
-<div class="row">
-    <div class="col">
-        <p>Hello</p>
-    </div>
-</div>
+    {% for key in experience %}
+        <div class="row">
+            <div class="col-lg-6 col-sm-12">
+                <div class="card experience">
+                    <div class="card-body">
+                        <h5 class="card-title">{{ experience[key]['title'] }}</h5>
+                        <h6 class="card-subtitle mb-2 text-muted">{{ experience[key]['employer'] }}, {{ experience[key]['year'] }}</h6>
+                        <p class="card-text">{{ experience[key]['desc'] }}</p>
+                        <!--
+                        <a href="#" class="card-link">Card link</a>
+                        <a href="#" class="card-link">Another link</a>
+                        -->
+                    </div>
+                </div>
+            </div>
+        </div>
+        <br>
+    {% endfor %}
 {% endblock %}

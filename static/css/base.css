@@ -1,3 +1,12 @@
 .main-header {
     text-align: center;
 }
+
+.experience {
+    width: 18rem;
+}
+
+.education-image {
+    width: 300px;
+    height: 200px;
+}
