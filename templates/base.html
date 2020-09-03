@@ -18,14 +18,15 @@
             <a class="p-2 text-dark" href="{{ url_for('experience') }}">Experience</a>
             <a class="p-2 text-dark" href="{{ url_for('projects') }}">Projects</a>
         </nav>
-        <a class="btn btn-outline-primary" href="{{ url_for('resume') }}">My Resume</a>
+
+        <a class="btn btn-outline-primary" href="{{ url_for('resume') }}" download="../static/pdf/ResumeFeb2020.pdf">My Resume</a>
     </div>
     <!-- end nav -->
     <!-- header -->
     <div class="jumbotron">
         <div class="container">
             <h1 class="main-header display-3">{% block header %}{% endblock %}</h1>
-            <p class="lead header-desc">{% block header_desc %}{% endblock %}</p>
+            <h2 class="lead header-desc" align="center">{% block header_desc %}{% endblock %}</h2>
         </div>
     </div>
     <!-- end header -->
