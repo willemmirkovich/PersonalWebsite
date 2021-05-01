@@ -5,6 +5,9 @@ import Header from "./header";
 import Footer from "./footer";
 import Experience from "./experience";
 
+// NOTE: need to import actual css files for bootstrap to work
+import "bootstrap/dist/css/bootstrap.min.css";
+
 const Main = () => {
     return (
         <h1>Hello</h1>
