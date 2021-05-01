@@ -1,6 +1,5 @@
 import React from "react";
 import { render } from "react-dom";
-// import { Container,  } from "react-bootstrap";
 import { Route, BrowserRouter as Router, Switch } from "react-router-dom";
 import Header from "./header";
 import Footer from "./footer";
