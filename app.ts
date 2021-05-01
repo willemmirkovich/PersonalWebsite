@@ -1,5 +1,4 @@
 import express from "express";
-import { render } from "react-dom";
 
 const app = express();
 const port = 5000;
