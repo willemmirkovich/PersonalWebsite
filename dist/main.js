@@ -15,6 +15,7 @@ var react_router_dom_1 = __webpack_require__(10);
 var header_1 = __importDefault(__webpack_require__(31));
 var footer_1 = __importDefault(__webpack_require__(63));
 var experience_1 = __importDefault(__webpack_require__(64));
+// NOTE: need to import actual css files for bootstrap to work
 __webpack_require__(65);
 var Main = function () {
     return (react_1.default.createElement("h1", null, "Hello"));
@@ -33906,7 +33907,12 @@ var Header = function () {
         react_1.default.createElement(react_router_bootstrap_1.LinkContainer, { to: "/" },
             react_1.default.createElement(Nav_1.default.Link, null, "Home")),
         react_1.default.createElement(react_router_bootstrap_1.LinkContainer, { to: "/experience" },
-            react_1.default.createElement(Nav_1.default.Link, null, "Experience"))));
+            react_1.default.createElement(Nav_1.default.Link, null, "Experience"))
+    // TODO: determine how to do downloads
+    ,
+        "// TODO: determine how to do downloads",
+        react_1.default.createElement(react_router_bootstrap_1.LinkContainer, { to: "/resume" },
+            react_1.default.createElement(Nav_1.default.Link, null, "Resume"))));
 };
 exports.default = Header;
 
