@@ -15,8 +15,9 @@ var react_router_dom_1 = __webpack_require__(10);
 var header_1 = __importDefault(__webpack_require__(31));
 var footer_1 = __importDefault(__webpack_require__(63));
 var experience_1 = __importDefault(__webpack_require__(64));
+var resume_1 = __importDefault(__webpack_require__(65));
 // NOTE: need to import actual css files for bootstrap to work
-__webpack_require__(65);
+__webpack_require__(67);
 var Main = function () {
     return (react_1.default.createElement("h1", null, "Hello"));
 };
@@ -26,7 +27,8 @@ var router = (react_1.default.createElement(react_router_dom_1.BrowserRouter, nu
         react_1.default.createElement("hr", null),
         react_1.default.createElement(react_router_dom_1.Switch, null,
             react_1.default.createElement(react_router_dom_1.Route, { exact: true, path: "/", component: Main }),
-            react_1.default.createElement(react_router_dom_1.Route, { path: "/experience", component: experience_1.default })),
+            react_1.default.createElement(react_router_dom_1.Route, { path: "/experience", component: experience_1.default }),
+            react_1.default.createElement(react_router_dom_1.Route, { path: "/resume", component: resume_1.default })),
         react_1.default.createElement(footer_1.default, null))));
 react_dom_1.render(router, document.getElementById('root'));
 
@@ -33897,21 +33899,15 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 };
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 var react_1 = __importDefault(__webpack_require__(1));
-// import { NavLink } from "react-router-dom";
 var Nav_1 = __importDefault(__webpack_require__(32));
 var react_router_bootstrap_1 = __webpack_require__(60);
 var Header = function () {
-    return (
-    // TODO: determine if best way to do this
-    react_1.default.createElement(Nav_1.default, null,
+    return (react_1.default.createElement(Nav_1.default, null,
         react_1.default.createElement(react_router_bootstrap_1.LinkContainer, { to: "/" },
             react_1.default.createElement(Nav_1.default.Link, null, "Home")),
         react_1.default.createElement(react_router_bootstrap_1.LinkContainer, { to: "/experience" },
-            react_1.default.createElement(Nav_1.default.Link, null, "Experience"))
-    // TODO: determine how to do downloads
-    ,
-        "// TODO: determine how to do downloads",
-        react_1.default.createElement(react_router_bootstrap_1.LinkContainer, { to: "/resume" },
+            react_1.default.createElement(Nav_1.default.Link, null, "Experience")),
+        react_1.default.createElement(react_router_bootstrap_1.LinkContainer, { to: '/resume' },
             react_1.default.createElement(Nav_1.default.Link, null, "Resume"))));
 };
 exports.default = Header;
@@ -35812,6 +35808,27 @@ exports.default = Experience;
 
 /***/ }),
 /* 65 */
+/***/ (function(__unused_webpack_module, exports, __webpack_require__) {
+
+"use strict";
+
+var __importDefault = (this && this.__importDefault) || function (mod) {
+    return (mod && mod.__esModule) ? mod : { "default": mod };
+};
+Object.defineProperty(exports, "__esModule", ({ value: true }));
+var react_1 = __importDefault(__webpack_require__(1));
+var ResponsiveEmbed_1 = __importDefault(__webpack_require__(66));
+var Resume = function () {
+    return (react_1.default.createElement("div", null,
+        react_1.default.createElement("a", { href: '/resume' }, "Download my Resume"),
+        react_1.default.createElement(ResponsiveEmbed_1.default, null,
+            react_1.default.createElement("embed", { src: "/static/test.pdf" }))));
+};
+exports.default = Resume;
+
+
+/***/ }),
+/* 66 */
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -35819,9 +35836,52 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
-/* harmony import */ var _style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(66);
+/* harmony import */ var _babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(22);
+/* harmony import */ var _babel_runtime_helpers_esm_objectWithoutPropertiesLoose__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(25);
+/* harmony import */ var classnames__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(33);
+/* harmony import */ var classnames__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(classnames__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(1);
+/* harmony import */ var _ThemeProvider__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(42);
+
+
+
+
+
+var defaultProps = {
+  aspectRatio: '1by1'
+};
+var ResponsiveEmbed = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3__.forwardRef(function (_ref, ref) {
+  var bsPrefix = _ref.bsPrefix,
+      className = _ref.className,
+      children = _ref.children,
+      aspectRatio = _ref.aspectRatio,
+      props = (0,_babel_runtime_helpers_esm_objectWithoutPropertiesLoose__WEBPACK_IMPORTED_MODULE_1__.default)(_ref, ["bsPrefix", "className", "children", "aspectRatio"]);
+
+  var decoratedBsPrefix = (0,_ThemeProvider__WEBPACK_IMPORTED_MODULE_4__.useBootstrapPrefix)(bsPrefix, 'embed-responsive');
+  var child = react__WEBPACK_IMPORTED_MODULE_3__.Children.only(children);
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3__.createElement("div", (0,_babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__.default)({
+    ref: ref
+  }, props, {
+    className: classnames__WEBPACK_IMPORTED_MODULE_2___default()(decoratedBsPrefix, className, aspectRatio && decoratedBsPrefix + "-" + aspectRatio)
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3__.cloneElement(child, {
+    className: classnames__WEBPACK_IMPORTED_MODULE_2___default()(child.props.className, decoratedBsPrefix + "-item")
+  }));
+});
+ResponsiveEmbed.defaultProps = defaultProps;
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (ResponsiveEmbed);
+
+/***/ }),
+/* 67 */
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(68);
 /* harmony import */ var _style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _css_loader_dist_cjs_js_bootstrap_min_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(67);
+/* harmony import */ var _css_loader_dist_cjs_js_bootstrap_min_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(69);
 
             
 
@@ -35837,7 +35897,7 @@ var update = _style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMP
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (_css_loader_dist_cjs_js_bootstrap_min_css__WEBPACK_IMPORTED_MODULE_1__.default.locals || {});
 
 /***/ }),
-/* 66 */
+/* 68 */
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
 "use strict";
@@ -36112,7 +36172,7 @@ module.exports = function (list, options) {
 };
 
 /***/ }),
-/* 67 */
+/* 69 */
 /***/ ((module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -36120,7 +36180,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
-/* harmony import */ var _css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(68);
+/* harmony import */ var _css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(70);
 /* harmony import */ var _css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0__);
 // Imports
 
@@ -36132,7 +36192,7 @@ ___CSS_LOADER_EXPORT___.push([module.id, "/*!\n * Bootstrap v4.6.0 (https://getb
 
 
 /***/ }),
-/* 68 */
+/* 70 */
 /***/ ((module) => {
 
 "use strict";

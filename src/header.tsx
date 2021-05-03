@@ -11,7 +11,7 @@ const Header = () => {
             <LinkContainer to="/experience">
                 <Nav.Link>Experience</Nav.Link> 
             </LinkContainer>
-            <LinkContainer to="/resume">
+            <LinkContainer to='/resume'>
                 <Nav.Link>Resume</Nav.Link> 
             </LinkContainer>
         </Nav>

@@ -5,6 +5,7 @@ import { Route, BrowserRouter as Router, Switch } from "react-router-dom";
 import Header from "./header";
 import Footer from "./footer";
 import Experience from "./experience";
+import Resume from "./resume";
 
 // NOTE: need to import actual css files for bootstrap to work
 import "bootstrap/dist/css/bootstrap.min.css";
@@ -22,6 +23,7 @@ const router = (
             <Switch>
                 <Route exact path="/" component={Main}></Route>
                 <Route path="/experience" component={Experience}></Route>
+                <Route path="/resume" component={Resume}></Route>
             </Switch>
             <Footer />
         </div>
