@@ -1,10 +1,13 @@
 import React from "react";
+import { Container, Jumbotron } from "react-bootstrap";
 
 const Footer = () => {
     return (
-        <footer>
-            <h2>My footer</h2>
-        </footer>
+        <Container fluid>
+            <Jumbotron>
+                <h1>hello</h1>
+            </Jumbotron>
+        </Container>
     )
 }
 

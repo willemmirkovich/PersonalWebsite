@@ -1,8 +1,13 @@
 import React from "react";
+import { Container, Jumbotron } from "react-bootstrap";
 
 const Experience = () => {
     return (
-        <h1>Experience</h1>
+        <Container fluid>
+            <Jumbotron>
+                <h1>Boom</h1>
+            </Jumbotron>
+        </Container>
     )
 }
 

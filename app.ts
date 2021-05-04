@@ -11,7 +11,6 @@ app.get('/', (req, res) => res.sendFile(`${__dirname}/index.html`));
 
 app.get('/resume', (req, res) => {
   res.download(`${__dirname}/static/log.txt`);
-    
 });
 
 app.listen(port, () => {

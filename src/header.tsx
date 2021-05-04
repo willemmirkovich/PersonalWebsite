@@ -1,20 +1,25 @@
 import React from "react";
-import Nav from "react-bootstrap/Nav";
+import { Container, Nav } from "react-bootstrap";
 import { LinkContainer } from "react-router-bootstrap";
 
 const Header = () => {
     return(
-        <Nav>
-            <LinkContainer to="/">
-                <Nav.Link>Home</Nav.Link> 
-            </LinkContainer>
-            <LinkContainer to="/experience">
-                <Nav.Link>Experience</Nav.Link> 
-            </LinkContainer>
-            <LinkContainer to='/resume'>
-                <Nav.Link>Resume</Nav.Link> 
-            </LinkContainer>
-        </Nav>
+        <Container fluid>
+            <Nav>
+                <LinkContainer to="/">
+                    <Nav.Link disabled>Willem Mirkovich</Nav.Link>
+                </LinkContainer>
+                <LinkContainer to="/">
+                    <Nav.Link>Home</Nav.Link> 
+                </LinkContainer>
+                <LinkContainer to="/experience">
+                    <Nav.Link>Experience</Nav.Link> 
+                </LinkContainer>
+                <LinkContainer to='/resume'>
+                    <Nav.Link>Resume</Nav.Link> 
+                </LinkContainer>
+            </Nav>
+        </Container>
     )
 }
 
