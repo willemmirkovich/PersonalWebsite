@@ -11,7 +11,7 @@ const BaseContainer = (props: BaseContainerProps) => {
     return (
         <Container fluid>
             <Jumbotron>
-                <Col lg={{ span: 6, offset: 3}} sm='12'>
+                <Col lg={{ span: 8, offset: 2}} sm='12'>
                     {props.children}
                 </Col>
             </Jumbotron>

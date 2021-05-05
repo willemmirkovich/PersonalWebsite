@@ -33913,7 +33913,7 @@ var react_bootstrap_1 = __webpack_require__(32);
 var BaseContainer = function (props) {
     return (react_1.default.createElement(react_bootstrap_1.Container, { fluid: true },
         react_1.default.createElement(react_bootstrap_1.Jumbotron, null,
-            react_1.default.createElement(react_bootstrap_1.Col, { lg: { span: 6, offset: 3 }, sm: '12' }, props.children))));
+            react_1.default.createElement(react_bootstrap_1.Col, { lg: { span: 8, offset: 2 }, sm: '12' }, props.children))));
 };
 exports.default = BaseContainer;
 
@@ -49008,10 +49008,23 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 };
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 var react_1 = __importDefault(__webpack_require__(1));
-var baseContainer_1 = __importDefault(__webpack_require__(31));
+var react_bootstrap_1 = __webpack_require__(32);
 var Footer = function () {
-    return (react_1.default.createElement(baseContainer_1.default, null,
-        react_1.default.createElement("h1", null, "Footer")));
+    // TODO: check sizing
+    return (react_1.default.createElement(react_bootstrap_1.Container, { fluid: true },
+        react_1.default.createElement(react_bootstrap_1.Jumbotron, null,
+            react_1.default.createElement(react_bootstrap_1.Row, null,
+                react_1.default.createElement(react_bootstrap_1.Col, { lg: { span: '3', offset: '2' }, sm: '4' },
+                    react_1.default.createElement("h2", null, "Contact"),
+                    react_1.default.createElement("p", null, "Willem Mirkovich"),
+                    react_1.default.createElement("a", { href: 'mailto: willemmirkovich@gmail.com' }, "willemmirkovich@gmail.com")),
+                react_1.default.createElement(react_bootstrap_1.Col, { lg: '3', sm: '4' },
+                    react_1.default.createElement("h2", null, "Social Media"),
+                    react_1.default.createElement("a", { href: "https://github.com" },
+                        react_1.default.createElement("img", { src: '/static/github.png' }))),
+                react_1.default.createElement(react_bootstrap_1.Col, { lg: '3', sm: '4' },
+                    react_1.default.createElement("h2", null, "Acknowledgements"),
+                    react_1.default.createElement("p", null, "Built using React and Bootstrap"))))));
 };
 exports.default = Footer;
 
@@ -49033,16 +49046,18 @@ var Experience = function () {
     // NOTE: bg=dark
     return (react_1.default.createElement(baseContainer_1.default, null,
         react_1.default.createElement("h1", null, "Experience"),
-        react_1.default.createElement(react_bootstrap_1.Card, { bg: 'dark', text: 'white' },
-            react_1.default.createElement(react_bootstrap_1.Card.Body, null,
-                react_1.default.createElement(react_bootstrap_1.Card.Title, null, "Sofware Engineer 2"),
-                react_1.default.createElement(react_bootstrap_1.Card.Subtitle, null, "Anark Corporation"),
-                react_1.default.createElement(react_bootstrap_1.Card.Text, null, "Todo"))),
-        react_1.default.createElement(react_bootstrap_1.Card, { bg: 'dark', text: 'white' },
-            react_1.default.createElement(react_bootstrap_1.Card.Body, null,
-                react_1.default.createElement(react_bootstrap_1.Card.Title, null, "Professional Research Assistant"),
-                react_1.default.createElement(react_bootstrap_1.Card.Subtitle, null, "University of Colorado, Boulder Aerospace"),
-                react_1.default.createElement(react_bootstrap_1.Card.Text, null, "Todo")))));
+        react_1.default.createElement(react_bootstrap_1.CardDeck, null,
+            react_1.default.createElement(react_bootstrap_1.Card, { bg: 'dark', text: 'white' },
+                react_1.default.createElement(react_bootstrap_1.Card.Body, null,
+                    react_1.default.createElement(react_bootstrap_1.Card.Title, null, "Sofware Engineer 2"),
+                    react_1.default.createElement(react_bootstrap_1.Card.Subtitle, null, "Anark Corporation"),
+                    react_1.default.createElement(react_bootstrap_1.Card.Text, null, "Todo"))),
+            react_1.default.createElement("br", null),
+            react_1.default.createElement(react_bootstrap_1.Card, { bg: 'dark', text: 'white' },
+                react_1.default.createElement(react_bootstrap_1.Card.Body, null,
+                    react_1.default.createElement(react_bootstrap_1.Card.Title, null, "Professional Research Assistant"),
+                    react_1.default.createElement(react_bootstrap_1.Card.Subtitle, null, "University of Colorado, Boulder Aerospace"),
+                    react_1.default.createElement(react_bootstrap_1.Card.Text, null, "Todo"))))));
 };
 exports.default = Experience;
 
@@ -49060,15 +49075,14 @@ Object.defineProperty(exports, "__esModule", ({ value: true }));
 var react_1 = __importDefault(__webpack_require__(1));
 var react_bootstrap_1 = __webpack_require__(32);
 var ResponsiveEmbed_1 = __importDefault(__webpack_require__(248));
+var baseContainer_1 = __importDefault(__webpack_require__(31));
 var Resume = function () {
     // NOTE: this is good sizing
-    return (react_1.default.createElement(react_bootstrap_1.Container, { fluid: true },
-        react_1.default.createElement(react_bootstrap_1.Jumbotron, null,
-            react_1.default.createElement(react_bootstrap_1.Col, { lg: { span: 6, offset: 3 }, sm: '12' },
-                react_1.default.createElement("h1", null, "My Resume"),
-                react_1.default.createElement(react_bootstrap_1.Button, { size: 'lg', href: '/resume' }, "Download"),
-                react_1.default.createElement(ResponsiveEmbed_1.default, null,
-                    react_1.default.createElement("embed", { src: "/static/test.pdf" }))))));
+    return (react_1.default.createElement(baseContainer_1.default, null,
+        react_1.default.createElement("h1", null, "My Resume"),
+        react_1.default.createElement(react_bootstrap_1.Button, { size: 'lg', href: '/resume' }, "Download"),
+        react_1.default.createElement(ResponsiveEmbed_1.default, null,
+            react_1.default.createElement("embed", { src: "/static/test.pdf" }))));
 };
 exports.default = Resume;
 
@@ -49089,18 +49103,20 @@ var baseContainer_1 = __importDefault(__webpack_require__(31));
 var Education = function () {
     return (react_1.default.createElement(baseContainer_1.default, null,
         react_1.default.createElement("h1", null, "Education"),
-        react_1.default.createElement(react_bootstrap_1.Card, null,
-            react_1.default.createElement(react_bootstrap_1.Card.Img, { src: "/static/CU.jpg" }),
-            react_1.default.createElement(react_bootstrap_1.Card.Body, null,
-                react_1.default.createElement(react_bootstrap_1.Card.Title, null, "University of Colorado Boulder"),
-                react_1.default.createElement(react_bootstrap_1.Card.Subtitle, null, "2018 - 2020"),
-                react_1.default.createElement(react_bootstrap_1.Card.Text, null, "Graduated with 3.9"))),
-        react_1.default.createElement(react_bootstrap_1.Card, null,
-            react_1.default.createElement(react_bootstrap_1.Card.Img, { src: "/static/UW.jpg" }),
-            react_1.default.createElement(react_bootstrap_1.Card.Body, null,
-                react_1.default.createElement(react_bootstrap_1.Card.Title, null, "University of Washington Seattle"),
-                react_1.default.createElement(react_bootstrap_1.Card.Subtitle, null, "2016 - 2018"),
-                react_1.default.createElement(react_bootstrap_1.Card.Text, null, "Graduated with 3.9")))));
+        react_1.default.createElement(react_bootstrap_1.CardGroup, null,
+            react_1.default.createElement(react_bootstrap_1.Card, null,
+                react_1.default.createElement(react_bootstrap_1.Card.Img, { src: "/static/CU.jpg" }),
+                react_1.default.createElement(react_bootstrap_1.Card.Body, null,
+                    react_1.default.createElement(react_bootstrap_1.Card.Title, null, "University of Colorado Boulder"),
+                    react_1.default.createElement(react_bootstrap_1.Card.Subtitle, null, "2018 - 2020"),
+                    react_1.default.createElement(react_bootstrap_1.Card.Text, null, "Graduated with 3.9"))),
+            react_1.default.createElement("br", null),
+            react_1.default.createElement(react_bootstrap_1.Card, null,
+                react_1.default.createElement(react_bootstrap_1.Card.Img, { src: "/static/UW.jpg" }),
+                react_1.default.createElement(react_bootstrap_1.Card.Body, null,
+                    react_1.default.createElement(react_bootstrap_1.Card.Title, null, "University of Washington Seattle"),
+                    react_1.default.createElement(react_bootstrap_1.Card.Subtitle, null, "2016 - 2018"),
+                    react_1.default.createElement(react_bootstrap_1.Card.Text, null, "Graduated with 3.9"))))));
 };
 exports.default = Education;
 
@@ -49116,10 +49132,17 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 };
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 var react_1 = __importDefault(__webpack_require__(1));
+var react_bootstrap_1 = __webpack_require__(32);
 var baseContainer_1 = __importDefault(__webpack_require__(31));
 var Projects = function () {
     return (react_1.default.createElement(baseContainer_1.default, null,
-        react_1.default.createElement("h1", null, "Projects")));
+        react_1.default.createElement("h1", null, "Projects"),
+        react_1.default.createElement(react_bootstrap_1.Card, { bg: 'secondary', text: 'white' },
+            react_1.default.createElement(react_bootstrap_1.Card.Body, null,
+                react_1.default.createElement(react_bootstrap_1.Card.Title, null, "genetic algorithm"),
+                react_1.default.createElement(react_bootstrap_1.Card.Subtitle, null, "not"),
+                react_1.default.createElement(react_bootstrap_1.Card.Text, null, "done"))),
+        react_1.default.createElement("br", null)));
 };
 exports.default = Projects;
 
