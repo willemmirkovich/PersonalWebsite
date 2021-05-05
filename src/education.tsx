@@ -2,39 +2,41 @@ import React from "react";
 import { Card } from "react-bootstrap";
 import BaseContainer from "./baseContainer";
 
-const Experience = () => {
-    // NOTE: bg=dark
+const Education = () => {
     return (
         <BaseContainer>
-            <h1>Experience</h1>
-            <Card bg='dark' text='white'>
+            <h1>Education</h1>
+            <Card>
+                <Card.Img src="/static/CU.jpg"></Card.Img>
                 <Card.Body>
                     <Card.Title>
-                        Sofware Engineer 2
+                        University of Colorado Boulder
                     </Card.Title>
                     <Card.Subtitle>
-                        Anark Corporation
+                        2018 - 2020
                     </Card.Subtitle>
                     <Card.Text>
-                        Todo
+                        Graduated with 3.9
                     </Card.Text>
                 </Card.Body>
             </Card>
-            <Card bg='dark' text='white'>
+            <br></br>
+            <Card>
+                <Card.Img src="/static/UW.jpg"></Card.Img>
                 <Card.Body>
                     <Card.Title>
-                        Professional Research Assistant
+                        University of Washington Seattle 
                     </Card.Title>
                     <Card.Subtitle>
-                        University of Colorado, Boulder Aerospace
+                        2016 - 2018
                     </Card.Subtitle>
                     <Card.Text>
-                        Todo
+                        Graduated with 3.9
                     </Card.Text>
                 </Card.Body>
             </Card>
         </BaseContainer>
-    )
-}
+    );
+};
 
-export default Experience;
+export default Education;

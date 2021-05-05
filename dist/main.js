@@ -12,19 +12,21 @@ Object.defineProperty(exports, "__esModule", ({ value: true }));
 var react_1 = __importDefault(__webpack_require__(1));
 var react_dom_1 = __webpack_require__(4);
 var react_router_dom_1 = __webpack_require__(10);
-var header_1 = __importDefault(__webpack_require__(31));
-var footer_1 = __importDefault(__webpack_require__(268));
-var experience_1 = __importDefault(__webpack_require__(269));
-var resume_1 = __importDefault(__webpack_require__(270));
+var baseContainer_1 = __importDefault(__webpack_require__(31));
+var header_1 = __importDefault(__webpack_require__(265));
+var footer_1 = __importDefault(__webpack_require__(269));
+var experience_1 = __importDefault(__webpack_require__(270));
+var resume_1 = __importDefault(__webpack_require__(271));
+var education_1 = __importDefault(__webpack_require__(272));
+var projects_1 = __importDefault(__webpack_require__(273));
 // NOTE: need to import actual css files for bootstrap to work
-__webpack_require__(271);
-// react-bootstrap
-var react_bootstrap_1 = __webpack_require__(32);
+__webpack_require__(274);
 var Main = function () {
-    return (react_1.default.createElement(react_bootstrap_1.Container, { fluid: true },
-        react_1.default.createElement(react_bootstrap_1.Jumbotron, null,
-            react_1.default.createElement("h1", null, "Welcome"),
-            react_1.default.createElement("p", null, "My name is Willem, and I am a software Engineer and Part-time researcher. I enjoy tackling hard problems, and am always seeking new challenges."))));
+    return (
+    // NEED TO HANDLE CHILDREN
+    react_1.default.createElement(baseContainer_1.default, null,
+        react_1.default.createElement("h1", null, "Welcome"),
+        react_1.default.createElement("p", null, "My name is Willem, and I am a software Engineer and Part-time researcher. I enjoy tackling hard problems, and am always seeking new challenges.")));
 };
 var router = (react_1.default.createElement(react_router_dom_1.BrowserRouter, null,
     react_1.default.createElement("div", null,
@@ -32,7 +34,9 @@ var router = (react_1.default.createElement(react_router_dom_1.BrowserRouter, nu
         react_1.default.createElement("hr", null),
         react_1.default.createElement(react_router_dom_1.Switch, null,
             react_1.default.createElement(react_router_dom_1.Route, { exact: true, path: "/", component: Main }),
+            react_1.default.createElement(react_router_dom_1.Route, { path: "/education", component: education_1.default }),
             react_1.default.createElement(react_router_dom_1.Route, { path: "/experience", component: experience_1.default }),
+            react_1.default.createElement(react_router_dom_1.Route, { path: "/projects", component: projects_1.default }),
             react_1.default.createElement(react_router_dom_1.Route, { path: "/resume", component: resume_1.default })),
         react_1.default.createElement(footer_1.default, null))));
 react_dom_1.render(router, document.getElementById('root'));
@@ -33905,20 +33909,13 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 var react_1 = __importDefault(__webpack_require__(1));
 var react_bootstrap_1 = __webpack_require__(32);
-var react_router_bootstrap_1 = __webpack_require__(265);
-var Header = function () {
+// TODO: figure out how to do
+var BaseContainer = function (props) {
     return (react_1.default.createElement(react_bootstrap_1.Container, { fluid: true },
-        react_1.default.createElement(react_bootstrap_1.Nav, null,
-            react_1.default.createElement(react_router_bootstrap_1.LinkContainer, { to: "/" },
-                react_1.default.createElement(react_bootstrap_1.Nav.Link, { disabled: true }, "Willem Mirkovich")),
-            react_1.default.createElement(react_router_bootstrap_1.LinkContainer, { to: "/" },
-                react_1.default.createElement(react_bootstrap_1.Nav.Link, null, "Home")),
-            react_1.default.createElement(react_router_bootstrap_1.LinkContainer, { to: "/experience" },
-                react_1.default.createElement(react_bootstrap_1.Nav.Link, null, "Experience")),
-            react_1.default.createElement(react_router_bootstrap_1.LinkContainer, { to: '/resume' },
-                react_1.default.createElement(react_bootstrap_1.Nav.Link, null, "Resume")))));
+        react_1.default.createElement(react_bootstrap_1.Jumbotron, null,
+            react_1.default.createElement(react_bootstrap_1.Col, { lg: { span: 6, offset: 3 }, sm: '12' }, props.children))));
 };
-exports.default = Header;
+exports.default = BaseContainer;
 
 
 /***/ }),
@@ -48735,6 +48732,38 @@ Tooltip.displayName = 'Tooltip';
 
 /***/ }),
 /* 265 */
+/***/ (function(__unused_webpack_module, exports, __webpack_require__) {
+
+"use strict";
+
+var __importDefault = (this && this.__importDefault) || function (mod) {
+    return (mod && mod.__esModule) ? mod : { "default": mod };
+};
+Object.defineProperty(exports, "__esModule", ({ value: true }));
+var react_1 = __importDefault(__webpack_require__(1));
+var react_bootstrap_1 = __webpack_require__(32);
+var react_router_bootstrap_1 = __webpack_require__(266);
+var Header = function () {
+    return (react_1.default.createElement(react_bootstrap_1.Container, { fluid: true },
+        react_1.default.createElement(react_bootstrap_1.Nav, null,
+            react_1.default.createElement(react_router_bootstrap_1.LinkContainer, { to: "/" },
+                react_1.default.createElement(react_bootstrap_1.Nav.Link, { disabled: true }, "Willem Mirkovich")),
+            react_1.default.createElement(react_router_bootstrap_1.LinkContainer, { to: "/" },
+                react_1.default.createElement(react_bootstrap_1.Nav.Link, null, "Home")),
+            react_1.default.createElement(react_router_bootstrap_1.LinkContainer, { to: "/education" },
+                react_1.default.createElement(react_bootstrap_1.Nav.Link, null, "Education")),
+            react_1.default.createElement(react_router_bootstrap_1.LinkContainer, { to: "/experience" },
+                react_1.default.createElement(react_bootstrap_1.Nav.Link, null, "Experience")),
+            react_1.default.createElement(react_router_bootstrap_1.LinkContainer, { to: "/projects" },
+                react_1.default.createElement(react_bootstrap_1.Nav.Link, null, "Projects")),
+            react_1.default.createElement(react_router_bootstrap_1.LinkContainer, { to: '/resume' },
+                react_1.default.createElement(react_bootstrap_1.Nav.Link, null, "Resume")))));
+};
+exports.default = Header;
+
+
+/***/ }),
+/* 266 */
 /***/ ((__unused_webpack_module, exports, __webpack_require__) => {
 
 "use strict";
@@ -48743,11 +48772,11 @@ Tooltip.displayName = 'Tooltip';
 exports.__esModule = true;
 exports.LinkContainer = exports.IndexLinkContainer = undefined;
 
-var _IndexLinkContainer2 = __webpack_require__(266);
+var _IndexLinkContainer2 = __webpack_require__(267);
 
 var _IndexLinkContainer3 = _interopRequireDefault(_IndexLinkContainer2);
 
-var _LinkContainer2 = __webpack_require__(267);
+var _LinkContainer2 = __webpack_require__(268);
 
 var _LinkContainer3 = _interopRequireDefault(_LinkContainer2);
 
@@ -48757,7 +48786,7 @@ exports.IndexLinkContainer = _IndexLinkContainer3.default;
 exports.LinkContainer = _LinkContainer3.default;
 
 /***/ }),
-/* 266 */
+/* 267 */
 /***/ ((__unused_webpack_module, exports, __webpack_require__) => {
 
 "use strict";
@@ -48774,7 +48803,7 @@ var _react2 = _interopRequireDefault(_react);
 
 var _reactRouterDom = __webpack_require__(10);
 
-var _LinkContainer = __webpack_require__(267);
+var _LinkContainer = __webpack_require__(268);
 
 var _LinkContainer2 = _interopRequireDefault(_LinkContainer);
 
@@ -48808,7 +48837,7 @@ var IndexLinkContainer = exports.IndexLinkContainer = function (_React$Component
 exports.default = (0, _reactRouterDom.withRouter)(IndexLinkContainer);
 
 /***/ }),
-/* 267 */
+/* 268 */
 /***/ ((__unused_webpack_module, exports, __webpack_require__) => {
 
 "use strict";
@@ -48969,26 +48998,6 @@ LinkContainer.defaultProps = {
 exports.default = (0, _reactRouterDom.withRouter)(LinkContainer);
 
 /***/ }),
-/* 268 */
-/***/ (function(__unused_webpack_module, exports, __webpack_require__) {
-
-"use strict";
-
-var __importDefault = (this && this.__importDefault) || function (mod) {
-    return (mod && mod.__esModule) ? mod : { "default": mod };
-};
-Object.defineProperty(exports, "__esModule", ({ value: true }));
-var react_1 = __importDefault(__webpack_require__(1));
-var react_bootstrap_1 = __webpack_require__(32);
-var Footer = function () {
-    return (react_1.default.createElement(react_bootstrap_1.Container, { fluid: true },
-        react_1.default.createElement(react_bootstrap_1.Jumbotron, null,
-            react_1.default.createElement("h1", null, "hello"))));
-};
-exports.default = Footer;
-
-
-/***/ }),
 /* 269 */
 /***/ (function(__unused_webpack_module, exports, __webpack_require__) {
 
@@ -48999,17 +49008,47 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 };
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 var react_1 = __importDefault(__webpack_require__(1));
+var baseContainer_1 = __importDefault(__webpack_require__(31));
+var Footer = function () {
+    return (react_1.default.createElement(baseContainer_1.default, null,
+        react_1.default.createElement("h1", null, "Footer")));
+};
+exports.default = Footer;
+
+
+/***/ }),
+/* 270 */
+/***/ (function(__unused_webpack_module, exports, __webpack_require__) {
+
+"use strict";
+
+var __importDefault = (this && this.__importDefault) || function (mod) {
+    return (mod && mod.__esModule) ? mod : { "default": mod };
+};
+Object.defineProperty(exports, "__esModule", ({ value: true }));
+var react_1 = __importDefault(__webpack_require__(1));
 var react_bootstrap_1 = __webpack_require__(32);
+var baseContainer_1 = __importDefault(__webpack_require__(31));
 var Experience = function () {
-    return (react_1.default.createElement(react_bootstrap_1.Container, { fluid: true },
-        react_1.default.createElement(react_bootstrap_1.Jumbotron, null,
-            react_1.default.createElement("h1", null, "Boom"))));
+    // NOTE: bg=dark
+    return (react_1.default.createElement(baseContainer_1.default, null,
+        react_1.default.createElement("h1", null, "Experience"),
+        react_1.default.createElement(react_bootstrap_1.Card, { bg: 'dark', text: 'white' },
+            react_1.default.createElement(react_bootstrap_1.Card.Body, null,
+                react_1.default.createElement(react_bootstrap_1.Card.Title, null, "Sofware Engineer 2"),
+                react_1.default.createElement(react_bootstrap_1.Card.Subtitle, null, "Anark Corporation"),
+                react_1.default.createElement(react_bootstrap_1.Card.Text, null, "Todo"))),
+        react_1.default.createElement(react_bootstrap_1.Card, { bg: 'dark', text: 'white' },
+            react_1.default.createElement(react_bootstrap_1.Card.Body, null,
+                react_1.default.createElement(react_bootstrap_1.Card.Title, null, "Professional Research Assistant"),
+                react_1.default.createElement(react_bootstrap_1.Card.Subtitle, null, "University of Colorado, Boulder Aerospace"),
+                react_1.default.createElement(react_bootstrap_1.Card.Text, null, "Todo")))));
 };
 exports.default = Experience;
 
 
 /***/ }),
-/* 270 */
+/* 271 */
 /***/ (function(__unused_webpack_module, exports, __webpack_require__) {
 
 "use strict";
@@ -49035,7 +49074,58 @@ exports.default = Resume;
 
 
 /***/ }),
-/* 271 */
+/* 272 */
+/***/ (function(__unused_webpack_module, exports, __webpack_require__) {
+
+"use strict";
+
+var __importDefault = (this && this.__importDefault) || function (mod) {
+    return (mod && mod.__esModule) ? mod : { "default": mod };
+};
+Object.defineProperty(exports, "__esModule", ({ value: true }));
+var react_1 = __importDefault(__webpack_require__(1));
+var react_bootstrap_1 = __webpack_require__(32);
+var baseContainer_1 = __importDefault(__webpack_require__(31));
+var Education = function () {
+    return (react_1.default.createElement(baseContainer_1.default, null,
+        react_1.default.createElement("h1", null, "Education"),
+        react_1.default.createElement(react_bootstrap_1.Card, null,
+            react_1.default.createElement(react_bootstrap_1.Card.Img, { src: "/static/CU.jpg" }),
+            react_1.default.createElement(react_bootstrap_1.Card.Body, null,
+                react_1.default.createElement(react_bootstrap_1.Card.Title, null, "University of Colorado Boulder"),
+                react_1.default.createElement(react_bootstrap_1.Card.Subtitle, null, "2018 - 2020"),
+                react_1.default.createElement(react_bootstrap_1.Card.Text, null, "Graduated with 3.9"))),
+        react_1.default.createElement(react_bootstrap_1.Card, null,
+            react_1.default.createElement(react_bootstrap_1.Card.Img, { src: "/static/UW.jpg" }),
+            react_1.default.createElement(react_bootstrap_1.Card.Body, null,
+                react_1.default.createElement(react_bootstrap_1.Card.Title, null, "University of Washington Seattle"),
+                react_1.default.createElement(react_bootstrap_1.Card.Subtitle, null, "2016 - 2018"),
+                react_1.default.createElement(react_bootstrap_1.Card.Text, null, "Graduated with 3.9")))));
+};
+exports.default = Education;
+
+
+/***/ }),
+/* 273 */
+/***/ (function(__unused_webpack_module, exports, __webpack_require__) {
+
+"use strict";
+
+var __importDefault = (this && this.__importDefault) || function (mod) {
+    return (mod && mod.__esModule) ? mod : { "default": mod };
+};
+Object.defineProperty(exports, "__esModule", ({ value: true }));
+var react_1 = __importDefault(__webpack_require__(1));
+var baseContainer_1 = __importDefault(__webpack_require__(31));
+var Projects = function () {
+    return (react_1.default.createElement(baseContainer_1.default, null,
+        react_1.default.createElement("h1", null, "Projects")));
+};
+exports.default = Projects;
+
+
+/***/ }),
+/* 274 */
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -49043,9 +49133,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
-/* harmony import */ var _style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(272);
+/* harmony import */ var _style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(275);
 /* harmony import */ var _style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _css_loader_dist_cjs_js_bootstrap_min_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(273);
+/* harmony import */ var _css_loader_dist_cjs_js_bootstrap_min_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(276);
 
             
 
@@ -49061,7 +49151,7 @@ var update = _style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMP
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (_css_loader_dist_cjs_js_bootstrap_min_css__WEBPACK_IMPORTED_MODULE_1__.default.locals || {});
 
 /***/ }),
-/* 272 */
+/* 275 */
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
 "use strict";
@@ -49336,7 +49426,7 @@ module.exports = function (list, options) {
 };
 
 /***/ }),
-/* 273 */
+/* 276 */
 /***/ ((module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -49344,7 +49434,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
-/* harmony import */ var _css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(274);
+/* harmony import */ var _css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(277);
 /* harmony import */ var _css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0__);
 // Imports
 
@@ -49356,7 +49446,7 @@ ___CSS_LOADER_EXPORT___.push([module.id, "/*!\n * Bootstrap v4.6.0 (https://getb
 
 
 /***/ }),
-/* 274 */
+/* 277 */
 /***/ ((module) => {
 
 "use strict";

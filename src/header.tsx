@@ -12,8 +12,14 @@ const Header = () => {
                 <LinkContainer to="/">
                     <Nav.Link>Home</Nav.Link> 
                 </LinkContainer>
+                <LinkContainer to="/education">
+                    <Nav.Link>Education</Nav.Link> 
+                </LinkContainer>
                 <LinkContainer to="/experience">
                     <Nav.Link>Experience</Nav.Link> 
+                </LinkContainer>
+                <LinkContainer to="/projects">
+                    <Nav.Link>Projects</Nav.Link> 
                 </LinkContainer>
                 <LinkContainer to='/resume'>
                     <Nav.Link>Resume</Nav.Link> 
