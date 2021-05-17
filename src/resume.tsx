@@ -10,7 +10,7 @@ const Resume = () => {
             <h1>My Resume</h1>
             <Button size='lg' href='/resume'>Download</Button>
             <ResponsiveEmbed>
-                <embed src="/static/test.pdf"/>
+                <embed src="/static/resume.pdf"/>
             </ResponsiveEmbed>
         </BaseContainer>
     );

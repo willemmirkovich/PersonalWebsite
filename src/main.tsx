@@ -1,6 +1,7 @@
 import React from "react";
 import { render } from "react-dom";
 import { Route, BrowserRouter as Router, Switch } from "react-router-dom";
+import { Image } from "react-bootstrap";
 
 import BaseContainer from "./baseContainer";
 import Header from "./header";
@@ -16,11 +17,16 @@ import "bootstrap/dist/css/bootstrap.min.css";
 const Main = () => {
     return (
         // NEED TO HANDLE CHILDREN
+        // TODO: need personal image here
         <BaseContainer> 
-            <h1>Welcome</h1>
+            <h1>Willem Mirkovich</h1>
             <p>
-                My name is Willem, and I am a software Engineer and Part-time researcher. 
+                Full-time software engineer and part-time researcher. 
                 I enjoy tackling hard problems, and am always seeking new challenges.
+            </p>
+            <h2>Recent</h2>
+            <p>
+                Some of my most recent activities
             </p>
         </BaseContainer>
     )
