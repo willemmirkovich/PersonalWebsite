@@ -1,6 +1,6 @@
 import React from "react";
 import { render } from "react-dom";
-import { Route, BrowserRouter as Router, Switch } from "react-router-dom";
+import { Route, HashRouter as Router, Switch, useLocation } from "react-router-dom";
 import { Card, Button, Image } from "react-bootstrap";
 
 import BaseContainer from "./baseContainer";
