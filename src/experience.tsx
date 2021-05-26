@@ -20,27 +20,33 @@ const DarkCard = (title: string, sub: React.ReactNode, text: React.ReactNode) =>
 }
 
 const Experience = () => {
-    // NOTE: bg=dark
-
     // TODO: get full name of aero
 
     // TODO: cool list of tech you know here
     return (
         <BaseContainer>
             <h1>Experience</h1>
+            <p>For full experience list/details, please see <a href='/resume'>my resume</a></p>
             {DarkCard(
                 "Full Stack Software Engineer 2",
                 "Anark Corporation, Nov 2020-Current",
-                <ul>
-                    <li>Developed</li>
-                </ul>
+                <div>
+                    <p>Part of Full Stack Development Team</p>
+                    <ul>
+                        <li></li>
+                    </ul>
+                </div>
             )}
             {DarkCard(
                 "Professional Research Assistant",
                 "CU Boulder Aerospace, June 2020-Current",
-                <ul>
-                    <li>Did</li>
-                </ul>
+                <div>
+                    <p>Member of AMGeO Organization, headed by <a href="https://www.colorado.edu/aerospace/tomoko-matsuo">Tomoko Matsuo</a></p>
+                    <ul>
+                        <li>Presented at Earthcube 2021</li>
+                        <li>Developed API for interfacing with AMGeO through python</li>
+                    </ul>
+                </div>
             )}
             {DarkCard(
                 "Full Stack Software Engineer 1",

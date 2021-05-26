@@ -1,24 +1,39 @@
 import React from "react";
-import { Card } from "react-bootstrap";
+import { Button, Card } from "react-bootstrap";
 import BaseContainer from "./baseContainer";
 
-const Projects = () => {
+const ProjectCard = (title: React.ReactNode, sub: React.ReactNode, text: React.ReactNode, link?: string) => {
     return (
-        <BaseContainer>
-            <h1>Projects</h1>
             <Card bg='secondary' text='white'>
                 <Card.Body>
                     <Card.Title>
-                        genetic algorithm
+                        {title}
                     </Card.Title>
                     <Card.Subtitle>
-                        not
+                        {sub}
                     </Card.Subtitle>
+                    {
+                        (link ? <Button variant='primary' href={link}>Here</Button> : <div/>)
+                    }
                     <Card.Text>
-                        done
+                        {text}
                     </Card.Text>
                 </Card.Body>
             </Card>
+    )
+}
+
+const Projects = () => {
+    return (
+        // TODO: fill out
+        <BaseContainer>
+            <h1>Projects</h1>
+            {ProjectCard(
+                <p>This Website</p>,
+                <p>5/25/21</p>,
+                <p>Website to showcase my experience and career. Built using React, Bootstrap, Webpack among others</p>,
+                "this need to work"
+            )}
             <br></br>
         </BaseContainer>
     );
