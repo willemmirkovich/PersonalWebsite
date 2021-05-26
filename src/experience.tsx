@@ -1,5 +1,5 @@
 import React from "react";
-import { Card, CardDeck } from "react-bootstrap";
+import { Card } from "react-bootstrap";
 import BaseContainer from "./baseContainer";
 
 const DarkCard = (title: string, sub: React.ReactNode, text: React.ReactNode) => {

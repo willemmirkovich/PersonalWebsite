@@ -13,6 +13,7 @@ import Projects from "./projects";
 
 // NOTE: need to import actual css files for bootstrap to work
 import "bootstrap/dist/css/bootstrap.min.css";
+import Skills from "./skills";
 
 const Main = () => {
     return (
@@ -56,6 +57,7 @@ const router = (
                 <Route exact path="/" component={Main}></Route>
                 <Route path="/education" component={Education}></Route>
                 <Route path="/experience" component={Experience}></Route>
+                <Route path="/skills" component={Skills}></Route>
                 <Route path="/projects" component={Projects}></Route>
                 <Route path="/resume" component={Resume}></Route>
             </Switch>
