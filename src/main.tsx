@@ -33,7 +33,7 @@ const Main = () => {
             <Card className="text-center">
                 <Card.Body>
                     <Image src='/static/earthcube.png' width='200px' height='200px'></Image>
-                    <Card.Title>Preseneted at Earthcube 2021 for AMGeO</Card.Title>
+                    <Card.Title>Presented at Earthcube 2021 for AMGeO</Card.Title>
                     <Card.Text>
                         Created a notebook to present for eartcube 2021 that could be run in a Docker container.
                     </Card.Text>

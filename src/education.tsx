@@ -8,7 +8,7 @@ const Education = () => {
             <h1>Education</h1>
             <CardGroup>
                 <Card>
-                    <Card.Img src="/static/CU.jpg"></Card.Img>
+                    <Card.Img src="/static/CU.jpg" height='261px'></Card.Img>
                     <Card.Body>
                         <Card.Title>
                             BS in Computer Science
