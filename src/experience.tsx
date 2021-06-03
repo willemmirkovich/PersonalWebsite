@@ -33,7 +33,8 @@ const Experience = () => {
                 <div>
                     <p>Part of Full Stack Development Team</p>
                     <ul>
-                        <li></li>
+                        <li>Developed, Designed and maintained Typecript API for interacting with 3d, pdf, images and structured data in browser</li>
+                        <li>Implemented code-splitting to improve performance of our javascript load times initial load times</li>
                     </ul>
                 </div>
             )}
@@ -44,7 +45,9 @@ const Experience = () => {
                     <p>Member of AMGeO Organization, headed by <a href="https://www.colorado.edu/aerospace/tomoko-matsuo">Tomoko Matsuo</a></p>
                     <ul>
                         <li>Presented at Earthcube 2021</li>
+                        <li>Helped in hosting JupyterHub workshop for AMGeO on AWS</li>
                         <li>Developed API for interfacing with AMGeO through python</li>
+                        <li>Presented at AGU 2020</li>
                     </ul>
                 </div>
             )}
@@ -52,7 +55,8 @@ const Experience = () => {
                 "Full Stack Software Engineer 1",
                 "Anark Corporation, July 2020-Nov 2020",
                 <ul>
-                    <li>Developed</li>
+                    <li>Jest Puppeteer</li>
+                    <li>Bundled our api using webpack for using across our code base</li>
                 </ul>
             )}
             {DarkCard(
@@ -64,14 +68,7 @@ const Experience = () => {
             )}
             {DarkCard(
                 "Undergraduate Research Assistant/Developer",
-                "CU Boulder Aerospace, Aug 2019-May 2020",
-                <ul>
-                    <li>Developed</li>
-                </ul>
-            )}
-            {DarkCard(
-                "Software Developer",
-                "CU Boulder, Jan 2020-May 2020",
+                "CU Boulder Aerospace, Jan 2019-May 2019, Aug 2019 - Dec 2019",
                 <ul>
                     <li>Developed</li>
                 </ul>
@@ -84,14 +81,7 @@ const Experience = () => {
                     <text>Jan 2019-May 2019, Aug 2019 - Dec 2019</text>
                 </div>,
                 <ul>
-                    <li>Developed</li>
-                </ul>
-            )}
-            {DarkCard(
-                "Undergraduate Research Assistant/Developer",
-                "CU Boulder Aerospace, Jan 2019-May 2019, Aug 2019 - Dec 2019",
-                <ul>
-                    <li>Developed</li>
+                    <li></li>
                 </ul>
             )}
         </BaseContainer>
