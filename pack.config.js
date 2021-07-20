@@ -1,26 +1,25 @@
-const webpack = require('webpack');
+const path = require('path');
 
 module.exports = {
-    mode: 'none',
-    entry: './src/main.js',
+    mode: 'production',
+    entry: './src/main.tsx',
     output: {
         path: `${__dirname}/dist`,
         filename: 'main.js'
     },
+    resolve: {
+        extensions: ['.tsx', '.js'],
+    },
     module: {
         rules: [
           {
-            test: /\.css$/i,
-            use: ["style-loader", "css-loader"],
-          },
+            test: /\.tsx$/i,
+            include: path.resolve(__dirname, './src'),
+            loader: "ts-loader",
+            options: {
+                transpileOnly: true
+            }
+          }
         ],
-    },
-    plugins: [
-        new webpack.DefinePlugin({
-            'process.env.NODE_ENV': JSON.stringify('development')
-        })
-    ]
-
-
-
+    }
 }

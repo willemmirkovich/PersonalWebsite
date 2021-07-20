@@ -1,4 +1,4 @@
-import express from "express";
+const express = require('express');
 
 const app = express();
 const port = 5000;
@@ -10,6 +10,8 @@ app.use(express.static(`${__dirname}/dist/`));
 */
 
 app.get('/js', (req, res) => res.sendFile(`${__dirname}/dist/main.js`));
+
+app.get('/css', (req, res) => res.sendFile(`${__dirname}/node_modules/bootstrap/dist/css/bootstrap.min.css`));
 
 app.get('/', (req, res) => res.sendFile(`${__dirname}/index.html`));
 

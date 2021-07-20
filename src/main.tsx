@@ -10,9 +10,6 @@ import Experience from "./experience";
 import Resume from "./resume";
 import Education from "./education";
 import Projects from "./projects";
-
-// NOTE: need to import actual css files for bootstrap to work
-import "bootstrap/dist/css/bootstrap.min.css";
 import Skills from "./skills";
 
 const Main = () => {
@@ -25,6 +22,9 @@ const Main = () => {
                 Full-time software engineer and part-time researcher. 
                 I enjoy tackling hard problems, and am always seeking new challenges.
                 I am interested in Machine Learning, and have experience in multiple areas of Computer Science.
+
+
+                Is it me?
             </p>
             <h2>Recent</h2>
             <p>
