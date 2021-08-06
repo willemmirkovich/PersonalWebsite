@@ -1,4 +1,7 @@
+const https = require('https');
 const express = require('express');
+
+const production = (process.argv[2] === 'dev' ? false : true);
 
 const app = express();
 const port = 5000;
@@ -21,6 +24,17 @@ app.get('/resume', (req, res) => {
   res.download(`${__dirname}/static/resume.pdf`);
 });
 
-app.listen(port, () => {
-  console.log(`Server is running at http://localhost:${port}`);
-});
+if (production) {
+  console.log('prod');
+  // TODO: get credentials
+
+  // startup https server
+  const httpsServer = https.createServer()
+
+} else {
+  console.log('dev');
+  // simple dev startup
+  app.listen(port, () => {
+    console.log(`Server is running at http://localhost:${port}`);
+  });
+}
