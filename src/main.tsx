@@ -22,9 +22,6 @@ const Main = () => {
                 Full-time software engineer and part-time researcher. 
                 I enjoy tackling hard problems, and am always seeking new challenges.
                 I am interested in Machine Learning, and have experience in multiple areas of Computer Science.
-
-
-                Is it me?
             </p>
             <h2>Recent</h2>
             <p>
