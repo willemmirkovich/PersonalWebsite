@@ -1,5 +1,6 @@
 const https = require('https');
 const express = require('express');
+const fs = require('fs');
 
 const production = (process.argv[2] === 'dev' ? false : true);
 
@@ -25,14 +26,21 @@ app.get('/resume', (req, res) => {
 });
 
 if (production) {
-  console.log('prod');
-  // TODO: get credentials
+  console.log('starting up production server');
+
+  // credentials
+  const cert = fs.readFileSync('./hidden/cert.pem');
+  const key = fs.readFileSync('./hidden/key.pem');
 
   // startup https server
-  const httpsServer = https.createServer()
+  const server = https.createServer({key: key, cert: cert}, app);
+  server.listen(3001, () => {
+    console.log(`Server is running over https`);
+  });
 
 } else {
-  console.log('dev');
+  console.log('starting up dev server');
+
   // simple dev startup
   app.listen(port, () => {
     console.log(`Server is running at http://localhost:${port}`);
