@@ -28,13 +28,14 @@ const Experience = () => {
             <h1>Experience</h1>
             <p>For full experience list/details, please see <a href='/resume'>my resume</a></p>
             {DarkCard(
-                "Full Stack Software Engineer 2",
-                "Anark Corporation, Nov 2020-Current",
+                "Full Stack Software Engineer 1/2",
+                "Anark Corporation, July 2020-Current",
                 <div>
                     <p>Part of Full Stack Development Team</p>
                     <ul>
                         <li>Developed, Designed and maintained Typecript API for interacting with 3d, pdf, images and structured data in browser</li>
-                        <li>Implemented code-splitting to improve performance of our javascript load times initial load times</li>
+                        <li>Implemented code-splitting in Webpack to improve performance of our javascript load times initial load times</li>
+                        <li>Built Micorservices for SAAS ...</li>
                     </ul>
                 </div>
             )}
@@ -50,14 +51,6 @@ const Experience = () => {
                         <li>Presented at AGU 2020</li>
                     </ul>
                 </div>
-            )}
-            {DarkCard(
-                "Full Stack Software Engineer 1",
-                "Anark Corporation, July 2020-Nov 2020",
-                <ul>
-                    <li>Jest Puppeteer</li>
-                    <li>Bundled our api using webpack for using across our code base</li>
-                </ul>
             )}
             {DarkCard(
                 "Full Stack Software Engineer Intern",
