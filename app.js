@@ -29,12 +29,12 @@ if (production) {
   console.log('starting up production server');
 
   // credentials
-  const cert = fs.readFileSync('./hidden/cert.pem');
+  const cert = fs.readFileSync('./hidden/cert.crt');
   const key = fs.readFileSync('./hidden/key.pem');
 
   // startup https server
   const server = https.createServer({key: key, cert: cert}, app);
-  server.listen(3001, () => {
+  server.listen(443, () => {
     console.log(`Server is running over https`);
   });
 
