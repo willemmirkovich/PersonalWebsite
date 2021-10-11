@@ -43,7 +43,7 @@ const Experience = () => {
                 "Professional Research Assistant",
                 "CU Boulder Aerospace, June 2020-Current",
                 <div>
-                    <p>Member of AMGeO Organization, headed by <a href="https://www.colorado.edu/aerospace/tomoko-matsuo">Tomoko Matsuo</a></p>
+                    <p>Member of AMGeO Organization, headed by <a target="_blank" href="https://www.colorado.edu/aerospace/tomoko-matsuo">Tomoko Matsuo</a></p>
                     <ul>
                         <li>Presented at Earthcube 2021</li>
                         <li>Helped in hosting JupyterHub workshop for AMGeO on AWS</li>

@@ -12,6 +12,7 @@ import Education from "./education";
 import Projects from "./projects";
 import Skills from "./skills";
 
+// TODO: cedar image needs to be mobile friendly
 const Main = () => {
     return (
         <BaseContainer> 
@@ -29,16 +30,16 @@ const Main = () => {
                     <Card.Text>
                         Hosted Notebooks related to new AMGeO API on AWS server for multiple users to interact with and follow
 
-                        Notebooks are accessible <a href="https://github.com/AMGeO-Collaboration/CEDAR-Workshop-2021">here</a>,
+                        Notebooks are accessible <a target="_blank" href="https://github.com/AMGeO-Collaboration/CEDAR-Workshop-2021">here</a>,
                          and can be run using Docker
                     </Card.Text>
-                    <Button variant="secondary" href="https://github.com/AMGeO-Collaboration/CEDAR-Workshop-2021">github</Button>
+                    <Button variant="secondary" target="_blank" href="https://github.com/AMGeO-Collaboration/CEDAR-Workshop-2021">github</Button>
                 </Card.Body>
                 <Card.Footer className="text-muted">5/25/2021</Card.Footer>
                 </Card>
             <h2>See the Source</h2>
             <p>
-                Check out the source code for this website  <a href="https://github.com/willemmirkovich/PersonalWebsite">here</a> 
+                Check out the source code for this website  <a target="_blank" href="https://github.com/willemmirkovich/PersonalWebsite">here</a> 
             </p>
         </BaseContainer>
     )

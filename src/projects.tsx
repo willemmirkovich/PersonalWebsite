@@ -13,7 +13,7 @@ const ProjectCard = (title: React.ReactNode, sub: React.ReactNode, text: React.R
                         {sub}
                     </Card.Subtitle>
                     {
-                        (link ? <Button variant='primary' href={link}>Here</Button> : <div/>)
+                        (link ? <Button variant='primary' target="_blank" href={link}>Here</Button> : <div/>)
                     }
                     <Card.Text>
                         {text}
