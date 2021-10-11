@@ -13,7 +13,7 @@ const ProjectCard = (title: React.ReactNode, sub: React.ReactNode, text: React.R
                         {sub}
                     </Card.Subtitle>
                     {
-                        (link ? <Button variant='primary' target="_blank" href={link}>Here</Button> : <div/>)
+                        (link ? <div><Button variant='primary' target="_blank" href={link}>Here</Button> <br></br></div>: <div/>)
                     }
                     <Card.Text>
                         {text}
@@ -30,11 +30,17 @@ const Projects = () => {
             <h1>Projects</h1>
             {ProjectCard(
                 <p>This Website</p>,
-                <p>5/25/21</p>,
+                <p>10/11/21</p>,
                 <p>Website to showcase my experience and career. Built using React, Bootstrap, Webpack among others</p>,
-                "this need to work"
+                "https://github.com/willemmirkovich/PersonalWebsite"
             )}
             <br></br>
+            {ProjectCard(
+                <p>AMGeO</p>,
+                <p>Member of the team for 2+ years</p>,
+                <p>AMGeO is a data science software project funded by the NSFEarthCube program aiming to open up the vast amount of geospace data to a broader audience, while also giving users anaccess to data analysis tools that help gain meaningful insights. I am apart of the AMGeO team, helping with the developmentand release of open source software</p>,
+                "https://amgeo.colorado.edu/"
+            )}
         </BaseContainer>
     );
 };
